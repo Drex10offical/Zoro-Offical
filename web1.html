@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Zoro Offical </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .card-title {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-text {
+            font-size: 18px;
+            color: #cccccc;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn-select, .btn-whatsapp {
+            background: linear-gradient(45deg, #8e44ad, #3498db);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+        .btn-select:active, .btn-whatsapp:active {
+            transform: scale(0.98);
+        }
+        .price-display {
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .form-control {
+            margin-bottom: 10px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 100px;
+        }
+    </style>
+    <!-- Font Awesome for emojis -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="logo">
+            
+        </div>
+        <h1 class="text-center mb-4">Welcome to Zoro  Offical</h1>
+
+        <!-- Input fields for ID and Zone -->
+        <div class="form-group">
+            <label for="userId">Enter Your ID:</label>
+            <input type="text" class="form-control" id="userId" placeholder="Enter your MLBB ID">
+        </div>
+        <div class="form-group">
+            <label for="userZone">Enter Your Zone:</label>
+            <input type="text" class="form-control" id="userZone" placeholder="Enter your MLBB Zone">
+        </div>
+
+        <!-- Diamond Packages -->
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 5 Diamonds
+            </div>
+            <div class="card-text">
+                ₹15 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(15, '5 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 11 Diamonds
+            </div>
+            <div class="card-text">
+                ₹25 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(25, '11 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 14 Diamonds
+            </div>
+            <div class="card-text">
+                ₹30 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(30, '14 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 22 Diamonds
+            </div>
+            <div class="card-text">
+                ₹40 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(40, '22 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 42 Diamonds
+            </div>
+            <div class="card-text">
+                ₹65 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(65, '42 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 56 Diamonds
+            </div>
+            <div class="card-text">
+                ₹80 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(80, '56 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 70 Diamonds
+            </div>
+            <div class="card-text">
+                ₹105 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(105, '70 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 86 Diamonds
+            </div>
+            <div class="card-text">
+                ₹125 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(125, '86 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 112 Diamonds
+            </div>
+            <div class="card-text">
+                ₹150 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(150, '112 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 140 Diamonds
+            </div>
+            <div class="card-text">
+                ₹210 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(210, '140 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 172 Diamonds
+            </div>
+            <div class="card-text">
+                ₹235 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(235, '172 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 257 Diamonds
+            </div>
+            <div class="card-text">
+                ₹350 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(350, '257 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 284 Diamonds
+            </div>
+            <div class="card-text">
+                ₹425 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(425, '284 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 336 Diamonds
+            </div>
+            <div class="card-text">
+                ₹435 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(435, '336 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 355 Diamonds
+            </div>
+            <div class="card-text">
+                ₹545 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(545, '355 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 429 Diamonds
+            </div>
+            <div class="card-text">
+                ₹585 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(585, '429 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 570 Diamonds
+            </div>
+            <div class="card-text">
+                ₹715 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(715, '570 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 706 Diamonds
+            </div>
+            <div class="card-text">
+                ₹855 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(855, '706 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 1163 Diamonds
+            </div>
+            <div class="card-text">
+                ₹1439 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(1439, '1163 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 2195 Diamonds
+            </div>
+            <div class="card-text">
+                ₹2450 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(2450, '2195 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 2398 Diamonds
+            </div>
+            <div class="card-text">
+                ₹2850 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(2850, '2398 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> 6042 Diamonds
+            </div>
+            <div class="card-text">
+                ₹7120 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(7120, '6042 Diamonds')">Select</button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-gem fa-2x" style="margin-right: 10px;"></i> Weekly Pass
+            </div>
+            <div class="card-text">
+                ₹150 INR
+            </div>
+            <button class="btn-select" onclick="selectPackage(150, 'Weekly Pass')">Select</button>
+        </div>
+
+        <!-- Price Display -->
+        <div class="price-display" id="priceDisplay">Selected Package: None</div>
+        
+        <!-- Order Button -->
+        <button class="btn-whatsapp" id="orderButton">Place Order on WhatsApp</button>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        function selectPackage(price, description) {
+            document.getElementById('priceDisplay').innerText = 'Selected Package: ' + description + ' - ₹' + price;
+            document.getElementById('orderButton').onclick = function() {
+                const userId = document.getElementById('userId').value;
+                const userZone = document.getElementById('userZone').value;
+                if (userId && userZone) {
+                    const message = `Hello, I would like to order ${description} for ₹${price}. My MLBB ID is ${userId} and my Zone is ${userZone}.`;
+                    window.open(`https://wa.me/8822124785?text=${encodeURIComponent(message)}`, '_blank');
+                } else {
+                    alert('Please enter both your ID and Zone.');
+                }
+            };
+        }
+    </script>
+</body>
+</html>
